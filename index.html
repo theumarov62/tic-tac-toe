@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic tac toe | by umarovdev</title>
+    <link rel="stylesheet" href="./css/global.css" />
+  </head>
+  <body>
+    <audio id="button_click_sound" src="./audio/button_click_sound.mp3"></audio>
+    <audio id="alert_error_sound" src="./audio/alert_error_sound.mp3"></audio>
+    <!-- Post -->
+    <div id="my_github">
+      <a target="_blank" id="social" href="https://github.com/theumarov62"
+        >by umarovdev</a
+      >
+    </div>
+    <!-- Toast for selectable none -->
+    <div class="toast_selectable">
+      <h2>Kechirasiz, o'zingizga belgi tanlamadingiz.</h2>
+    </div>
+
+    <div class="d">
+      <h1 id="win" class=""></h1>
+    </div>
+
+    <main>
+      <section id="hero">
+        <!-- Container -->
+        <div class="container">
+          <!-- div tic tac toe Imgs  -->
+          <div id="tic_tac_toe_parent_imgs">
+            <img src="./images/x-img.svg" alt="X img" />
+            <img src="./images/o-img.svg" alt="O img" />
+          </div>
+
+          <div>
+            <!-- selectable buttons & title -->
+            <div id="selectable_buttons_and_title">
+              <!-- Title -->
+              <h3 id="title">1-O'YINCHI BELGISINI TANlANG</h3>
+              <!-- Selectable button -->
+              <div class="x_o_buttons">
+                <button id="x_button" class="buttons_standart">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M31.5569 5.28973L26.7103 0.443061C26.1195 -0.147687 25.1617 -0.147687 24.571 0.443061L16 9.01404L7.42902 0.443061C6.83827 -0.147687 5.88048 -0.147687 5.28973 0.443061L0.443061 5.28973C-0.147687 5.88048 -0.147687 6.83827 0.443061 7.42902L9.01404 16L0.443061 24.571C-0.147687 25.1617 -0.147687 26.1195 0.443061 26.7103L5.28973 31.5569C5.88048 32.1477 6.83827 32.1477 7.42902 31.5569L16 22.986L24.571 31.5569C25.1617 32.1477 26.1195 32.1477 26.7103 31.5569L31.5569 26.7103C32.1477 26.1195 32.1477 25.1617 31.5569 24.571L22.986 16L31.5569 7.42902C32.1477 6.83827 32.1477 5.88048 31.5569 5.28973Z"
+                      fill="#A8BFC9"
+                    />
+                  </svg>
+                </button>
+                <button id="o_button" class="buttons_standart">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M31.7412 15.8706C31.7412 7.10551 24.6357 0 15.8706 0C7.10551 0 0 7.10551 0 15.8706C0 24.6357 7.10551 31.7412 15.8706 31.7412C24.6357 31.7412 31.7412 24.6357 31.7412 15.8706ZM9.4048 15.8706C9.4048 12.2996 12.2996 9.4048 15.8706 9.4048C19.4416 9.4048 22.3364 12.2996 22.3364 15.8706C22.3364 19.4416 19.4416 22.3364 15.8706 22.3364C12.2996 22.3364 9.4048 19.4416 9.4048 15.8706Z"
+                      fill="#A8BFC9"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <h4 id="remember_text">Esingizda bo'lsin: X BIRINCHI BO'LADI</h4>
+            </div>
+            <!-- Start buttons -->
+            <div>
+              <button id="gpu_game">Yangi O'yin(AI bilan)</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Game Zone -->
+      <section id="game_zone" class="none_zone">
+        <div class="container_head_game_zone">
+          <div class="img_parent">
+            <img src="./images/x-img.svg" alt="" />
+            <img src="./images/o-img.svg" alt="" />
+          </div>
+          <button id="restart_game">
+            <img
+              src="./images/game_zone/restart_game.svg"
+              alt="Restart Game Img"
+            />
+          </button>
+        </div>
+        <div class="container container_game_zone">
+          <div class="cell" data-index="0"></div>
+          <div class="cell" data-index="1"></div>
+          <div class="cell" data-index="2"></div>
+          <div class="cell" data-index="3"></div>
+          <div class="cell" data-index="4"></div>
+          <div class="cell" data-index="5"></div>
+          <div class="cell" data-index="6"></div>
+          <div class="cell" data-index="7"></div>
+          <div class="cell" data-index="8"></div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/index.js" type="module" defer></script>
+  </body>
+</html>
